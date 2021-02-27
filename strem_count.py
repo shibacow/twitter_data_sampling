@@ -169,7 +169,7 @@ def run(argv=None, save_main_session=True):
     devide_dict = (
       lines
       | 'devide_dict' >> (beam.ParDo(DevideDict()))
-      | "to BQ" >>  WriteToBigQuery(table_fn,schema=schema_fn,project="shibacow-test")
+      | "to BQ" >>  WriteToBigQuery(table_fn,schema=schema_fn,project="xxxxxxxxx")
       #| "print" >> (beam.Map(print))
     )
       
